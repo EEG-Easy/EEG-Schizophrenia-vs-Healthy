@@ -1,10 +1,14 @@
 # EEG-ERP data and machinelearning 
-Classify schizophrenia and Healthy by EEG data and machinelearning algorithm
-With 9 channel, 3 times data augmentation [-0.5, 0.5] 0.001 random number was added, GridSearchCV is used
-We found that KNN with best parameter classifying accuracy is 98% for test dataset, and 96% for validation dataset.
-We will continue to find best EEG channel and best way to classify schizophrenia and healthy.
+Classify schizophrenia and Healthy by EEG data and machinelearning algorithm. 
+But it's hard to classify only with machinelearning and data so tried deeplearning model named perceptrone.
+To increase accuracy, augmentation with random number between [-5.000000,5.000000] for 3 times.
+Several steps are also done, such as robust scaling and increasing epoch or batch size, layers.
+However, all of these did not work for data and accuracy is always 57%~62%.
+Accuracy never increased..
+As a result, EEG-ERP data is not appropriate for classifying schizophrenia and Healthy with machinlearning.
 
-
-시연영상 - 정확도가 제일 높게 나온 모델
-part1: https://youtu.be/uV5SJ326tS0 
-part2: https://youtu.be/zZhWenMTzSs 
+The bad result reason may:
+  1. Too small subjects - this data only has 81 subjects.
+  2. wrong measurement of EEG data.
+  3. numerical EEG data is not appropriate for classification.
+These three reasons are the assumption that we can do.
