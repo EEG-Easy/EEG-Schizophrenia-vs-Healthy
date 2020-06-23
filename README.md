@@ -29,3 +29,4 @@ Several steps are done, and final acuuracy is about 92%, using Gaussian Processo
 # Local SW Program
 Classification between sz and control using machinelearning is done, so based on the result, we implemented local SW program for Diagnosing the patient whether she/he is sz or not.
 We used Python, under virtual environment with conda, and MNE library for EEG waves visualization.
+You can check code in eeg_main.py
